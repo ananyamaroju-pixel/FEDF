@@ -1,5 +1,3 @@
-
-
 let students = [];
 // -----------------------------
 // INITIAL DATA
@@ -39,7 +37,6 @@ const id = document.getElementById("id").value;
 const name = document.getElementById("name").value;
 const present = document.getElementById("status").value === "true";
 students.push({ id, name, present });
-
 render(students);
 }
 // -----------------------------
@@ -82,7 +79,6 @@ row.cells[2].textContent =
 s.present ? "Present" : "Absent";
 }
 });
-
 console.timeEnd("DOM Update");
 }
 // -----------------------------
@@ -124,7 +120,6 @@ console.time("VDOM Update");
 students.forEach(s => {
 s.present = Math.random() > 0.5;
 });
-
 const newVDOM = createVDOM(students);
 if (oldVDOM.length === 0) {
 oldVDOM = createVDOM(students);
